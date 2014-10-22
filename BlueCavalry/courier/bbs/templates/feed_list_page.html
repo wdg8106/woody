@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+    .myhead{
+        font-size: 2em;
+        text-align: center;
+        color: green;
+    }
+    html{
+        font-size: 2.5em;
+    }
+    
+
+    </style>
+</head>
+
+<body>
+    <div data-role="page" id="feed_list_page" data-theme="f">
+        <!-- header -->
+        <div data-role="header" data-theme="f" data-position="fixed" class="page-header">
+
+            <h1 class='myhead'>投诉建议</h1>
+            <a href="/bbs/postshow/" rel="external" data-role="button" class="ui-btn-right addFeed" data-icon="custom" data-iconpos="notext" data-corners="false" data-transition="fade">撰写投诉</a>
+
+        </div>
+        <!-- 导航栏 -->
+        <div data-role="content" data-theme="f">
+            <ul data-role="listview">
+                <p>反馈内容</p>
+                {% for feedback in feedback %}
+                <li>
+                    <h2>【{{feedback.subject}}】</h2>
+                    <div class="feed_content">{{ feedback.contents}}</div>
+                    <p class="feed_time">{{ feedback.datetime|date:"Y-m-d H:i:s" }}</p>
+
+                    <div class="feed_reply">
+                        <span class="red">【已回复】</span>{{ feedback.reply }}
+                    </div>
+                    <hr />
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div data-role="footer" data-theme="d" data-position="fixed">
+            <h5>Copyright © 2014  青骑bing</h5>
+        </div>
+    </div>
+
+</body>
+
+</html>

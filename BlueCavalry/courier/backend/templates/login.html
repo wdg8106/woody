@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理 | 登录页面</title>
+	<link rel="shortcut icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="/static/css/login.min.css">
+    <style type="text/css">
+    body      { background:#34495E;padding-top:90px;overflow:hidden; }
+    .loginTip { color:red;text-align:center;font-size:14px;margin:10px 0 0 0; }
+    </style>
+</head>
+<body onmousewheel="return false;">
+	<div class="container">
+        <div class="login">
+	        <div class="login-screen">
+	          	<div class="login-icon">
+	            	<img src="/static/images/login/icon.png" alt="Welcome to Mail App" />
+	            	<h4>Welcome to <small>Admin Page</small></h4>
+	          	</div>
+	          	<!-- form 登录表单开始 -->
+	          	<form id="loginForm" action="/backend/login_handle/" method="post">
+	          		{% csrf_token %}
+		          	<div class="login-form">
+			            <div class="form-group">
+			              <input type="text" class="form-control login-field" value="" placeholder="请输入账号" id="login-name" name="username" />
+			              <label class="login-field-icon fui-user" for="login-name"></label>
+			          	</div>
+			            <div class="form-group">
+			              <input type="password" class="form-control login-field" value="" placeholder="请输入密码" id="login-pass" name="password" />
+			              <label class="login-field-icon fui-lock" for="login-pass"></label>
+			            </div>
+		            	<a class="btn btn-primary btn-lg btn-block" href="#" onclick="document.getElementById('loginForm').submit();return false;">登&nbsp;&nbsp;&nbsp; 录</a>
+		            	<a class="login-link" href="#">忘 记 密 码 ？</a>
+		            	{% if login_error %}
+                            <p class="loginTip">{{login_error}}</p>
+                        {% endif %}
+		            </div>
+	            </form>
+	            <!-- form 登录表单结束 -->
+	        </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--此行代码保证移动设备缩放 -->
+
+<!-- 上传文件css -->
+<style type="text/css">
+body {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+.imgzip .itm {
+    padding-bottom: 1em;
+    word-break: break-all;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+}
+.imgzip .itm .tit {
+    margin-bottom: .5em;
+    background-color: #2b6cad;
+    color: #FFF;
+    padding: .5rem 1rem;
+    border-radius: 3px;
+}
+.imgzip .itm .cnt {
+    padding: 1rem;
+}
+.imgzip .itm .cnt img {
+    display: block;
+    max-width: 100%;
+}
+.imgzip textarea {
+    width: 100%;
+    height: 20em;
+}
+.ui-hidden-accessible{
+    display: block;
+    margin-left: 5%;
+}
+  #feed_content{
+    width: 80%;
+    margin-left: 5%;
+}
+  #feed_title{
+     width: 80%;
+     margin-left: 5%;
+}
+.hh{
+    text-align: center;
+}
+.ui-grid-a{
+    margin-left: 73%;
+}
+</style>
+</head>
+
+<body>
+    <div data-role="page" id="feed_post">
+        <!-- header -->
+        <div data-role="header" data-theme="f" data-position="fixed" class="page-header">
+            <!-- 提示：fullscreen 对于照片、图像和视频非常理想。 -->
+            <!-- 提示：对于 fixed 和 fullscreen 定位，触摸屏幕将隐藏和显示页眉及页脚。 -->
+            <a href="/bbs/feedback/" rel="external" data-theme="d" data-role="button" class="return_btn">返回</a>
+            <h1 class="hh">发表反馈</h1>
+            <!-- 导航栏 -->
+
+        </div>
+        <!-- header结束 -->
+        <!-- content 开始 -->
+        <div data-role="content">
+            <!-- 表单开始 -->
+            <form method="post" action="/bbs/postpost/" data-ajax="false" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label for="feed_title" class="ui-hidden-accessible">标题:</label>
+                <input type="text" name="subject" id="feed_title" placeholder="反馈标题" />
+                <br/><br/>
+                <label for="feed_content" class="ui-hidden-accessible">反馈内容:</label>
+                <textarea name="contents" id="feed_content" placeholder="请输入反馈内容" style="height:150px;border-radius:1px;"></textarea>
+                <br/><br/>
+                <div class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <input type="submit" value="提交" data-theme="b" />
+                        <br>
+                    </div>
+                  
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+    
+
+   
+   
+    // 表单验证js
+    $(function() {
+        $("form").submit(function() {
+            var title = $("input[id='feed_title']").val();
+            var content = $("textarea[id='feed_content']").val();
+            if (title.length < 1 || title.length > 20) {
+                new Toast({
+                    context: $('body'),
+                    message: '标题限制为20字内哦！'
+                }).show();
+
+                $("input[id='feed_title']").focus();
+                return false;
+            }
+
+            if (content.length < 10 || content.length > 140) {
+                new Toast({
+                    context: $('body'),
+                    message: '内容限制为10-140字内哦！'
+                }).show();
+                $("textarea[id='feed_content']").focus();
+                return false;
+            }
+
+            return true;
+        });
+
+    });
+    </script>
+</body>
+
+</html>

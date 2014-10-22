@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理 | 后台主页</title>
+	<link rel="shortcut icon" href="/static/images/favicon.ico">
+	<link rel="stylesheet" href="/static/css/login.min.css">
+
+    <link rel="stylesheet" href="/static/css/index.min.css">
+</head>
+<body>
+	<!-- 导航栏 -->
+	<div id="topSide">
+		<div id="topSideLeft">后台管理</div>
+		<div id="topSideRight">
+			管理员列表
+			<div id="topSideInfo">
+				<nav class="navbar-inverse" role="navigation">
+		            <div>
+		              <ul class="nav navbar-nav navbar-left">           
+		                <li class="dropdown">
+		                  <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">admin<b class="caret"></b></a>
+		                  <span class="dropdown-arrow"></span>
+		                  <ul class="dropdown-menu">
+		                    <li><a href="{%url "changePwd_handle" %}" id="changePwdBtn">修改密码</a></li>
+		                    <li><a href="javascript:if(confirm('确定退出?'))location='{% url "logout" %}'">退出登录</a></li>
+		                  </ul>
+		                </li>
+		               </ul>
+		            </div>
+          		</nav>
+			</div>
+		</div>
+	</div>
+	<!-- 导航栏以下 -->
+	<div id="leftAndRight">
+		<!-- 左边 -->
+		<div id="leftSide">
+			<div id="adminInfo">
+				<img src="/static/images/avatar/avatar4.png" />您好，管理员
+			</div>
+			<ul>
+				<li>
+					<a href="/backend/sendList/">
+						<span class="icon-img fui-mail"></span>
+						<span class="icon-text">寄件</span>
+						<span class="fui-arrow-left"></span>
+					</a>
+				</li>
+				<li>
+					<a href="/backend/receiveList/">
+						<span class="icon-img fui-time"></span>
+						<span class="icon-text">收件</span>
+						<span class="fui-arrow-left"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- 右边 -->
+		{% block rightSide %}{% endblock %}
+	</div>
+
+	<!-- 阴影 -->
+	<div id="shadow"></div>
+	<!-- 修改密码框 -->
+	<div id="changePwd">
+		<p>修改密码：</p>
+		<p><input type="text" placeholder="请输入原密码" class="form-control" />  </p>
+		<p><input type="text" placeholder="请输入新密码" class="form-control" />  </p>
+		<p><input type="text" placeholder="请再次输入新密码" class="form-control" />  </p>
+		<a href="javascript:void(0)" class="btn btn-danger" id="changePwdClose">取消</a>
+		<a href="javascript:void(0)" class="btn btn-primary" id="changePwdChange">修改</a>
+	</div>
+	<!-- 确认退出登录框 -->
+	<div id="logout">
+		<p>您确认要退出么？</p>
+		<a href="javascript:void(0)" class="btn btn-danger" id="logoutClose">取消</a>
+		<a href="javascript:void(0)" class="btn btn-primary" id="logoutYes">确认</a>
+	</div>
+	<!-- 提示框 -->
+	<div id="alertTip">这是个提示框，用js更换文字</div>
+</body>
+<script src="/static/js/jquery-1.8.3.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/index.js"></script>
+
+</html>

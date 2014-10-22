@@ -1,0 +1,5 @@
+﻿#忽略文件
+
+admin/node_modules
+phone/node_modules
+*.pyc

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理 | 后台主页</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="css/login.min.css">
+    <link rel="stylesheet" href="css/index.min.css">
+</head>
+<body>
+	<!-- 导航栏 -->
+	<div id="topSide">
+		<div id="topSideLeft">后台管理</div>
+		<div id="topSideRight">
+			管理员列表
+			<div id="topSideInfo">
+				<nav class="navbar-inverse" role="navigation">
+		            <div>
+		              <ul class="nav navbar-nav navbar-left">           
+		                <li class="dropdown">
+		                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">admin<b class="caret"></b></a>
+		                  <span class="dropdown-arrow"></span>
+		                  <ul class="dropdown-menu">
+		                    <li><a href="#" id="changePwdBtn">修改密码</a></li>
+		                    <li><a href="#" id="logoutBtn">退出登录</a></li>
+		                  </ul>
+		                </li>
+		               </ul>
+		            </div>
+          		</nav>
+			</div>
+		</div>
+	</div>
+	<!-- 导航栏以下 -->
+	<div id="leftAndRight">
+		<!-- 左边 -->
+		<div id="leftSide">
+			<div id="adminInfo">
+				<img src="images/avatar/avatar4.png" />您好，管理员
+			</div>
+			<ul>
+				<li>
+					<a href="#" class="active">
+						<span class="icon-img fui-mail"></span>
+						<span class="icon-text">寄件</span>
+						<span class="fui-arrow-left"></span>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<span class="icon-img fui-time"></span>
+						<span class="icon-text">收件</span>
+						<span class="fui-arrow-left"></span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!-- 右边 -->
+	    <div id="rightSide">
+	    	<div id="rightTop">
+	    		<a href="#">
+	    			<span class="icon-img fui-mail"></span>&nbsp;&nbsp;送件
+	    		</a>
+	    		<span class="fui-arrow-right"></span>&nbsp;&nbsp;送件列表
+			</div>
+			<div id="rightContent">
+				<div id="contentTable">
+					<span>寄件人姓名</span>
+					<span>电话</span>
+					<span>下单时间</span>
+					<span>是否已寄</span>
+					<span>操作</span>
+				</div>
+				<!-- 最好12条数据 -->
+				<div class="contentTr" id="1">
+					<span>爱德华·艾尔利克</span>
+					<span>15013451417</span>
+					<span>2014-08-08 15:15</span>
+					<span>是</span>
+					<span>
+						<a href="#"><img src="images/index/icn_search.png" alt="寄件详情" title="寄件详情"/></a>
+						<a href="#"><img src="images/index/icn_edit.png" alt="修改状态" title="修改状态"/></a>
+						<a href="#"><img src="images/index/icn_trash.png" alt="删除" title="删除"/></a>
+					</span>
+				</div>
+				<div class="contentTr" id="2">
+					<span>阿尔冯斯·艾尔利克</span>
+					<span>13246684313</span>
+					<span>2014-08-08 15:20</span>
+					<span style="color:red">否</span>
+					<span>
+						<a href="#"><img src="images/index/icn_search.png" alt="寄件详情" title="寄件详情"/></a>
+						<a href="#"><img src="images/index/icn_edit.png" alt="修改状态" title="修改状态"/></a>
+						<a href="#"><img src="images/index/icn_trash.png" alt="删除" title="删除"/></a>
+					</span>
+				</div>
+				<div class="contentTr" id="3">
+					<span>罗伊·马斯坦</span>
+					<span>15013451417</span>
+					<span>2014-08-08 15:20</span>
+					<span style="color:red">否</span>
+					<span>
+						<a href="#"><img src="images/index/icn_search.png" alt="寄件详情" title="寄件详情"/></a>
+						<a href="#"><img src="images/index/icn_edit.png" alt="修改状态" title="修改状态"/></a>
+						<a href="#"><img src="images/index/icn_trash.png" alt="删除" title="删除"/></a>
+					</span>
+				</div>
+				<div class="contentTr" id="4">
+					<span>马斯·休斯</span>
+					<span>15013451417</span>
+					<span>2014-08-08 15:20</span>
+					<span style="color:red">否</span>
+					<span>
+						<a href="#"><img src="images/index/icn_search.png" alt="寄件详情" title="寄件详情"/></a>
+						<a href="#"><img src="images/index/icn_edit.png" alt="修改状态" title="修改状态"/></a>
+						<a href="#"><img src="images/index/icn_trash.png" alt="删除" title="删除"/></a>
+					</span>
+				</div>
+				<div class="contentTr" id="5">
+					<span>亚力克斯·路易·阿姆斯特朗</span>
+					<span>15013451417</span>
+					<span>2014-08-08 15:20</span>
+					<span>是</span>
+					<span>
+						<a href="#"><img src="images/index/icn_search.png" alt="寄件详情" title="寄件详情"/></a>
+						<a href="#"><img src="images/index/icn_edit.png" alt="修改状态" title="修改状态"/></a>
+						<a href="#"><img src="images/index/icn_trash.png" alt="删除" title="删除"/></a>
+					</span>
+				</div>
+				<div class="contentTr" id="6">
+					<span>金·布拉德雷</span>
+					<span>15013451417</span>
+					<span>2014-08-08 15:20</span>
+					<span style="color:red">否</span>
+					<span>
+						<a href="#"><img src="images/index/icn_search.png" alt="寄件详情" title="寄件详情"/></a>
+						<a href="#"><img src="images/index/icn_edit.png" alt="修改状态" title="修改状态"/></a>
+						<a href="#"><img src="images/index/icn_trash.png" alt="删除" title="删除"/></a>
+					</span>
+				</div>
+				<div class="contentTr" id="7">
+					<span>温莉·洛克贝尔</span>
+					<span>15013451417</span>
+					<span>2014-08-08 15:20</span>
+					<span style="color:red">否</span>
+					<span>
+						<a href="#"><img src="images/index/icn_search.png" alt="寄件详情" title="寄件详情"/></a>
+						<a href="#"><img src="images/index/icn_edit.png" alt="修改状态" title="修改状态"/></a>
+						<a href="#"><img src="images/index/icn_trash.png" alt="删除" title="删除"/></a>
+					</span>
+				</div>
+				<div class="contentTr" id="8">
+					<span>小梅</span>
+					<span>15013451417</span>
+					<span>2014-08-08 15:20</span>
+					<span>是</span>
+					<span>
+						<a href="#"><img src="images/index/icn_search.png" alt="寄件详情" title="寄件详情"/></a>
+						<a href="#"><img src="images/index/icn_edit.png" alt="修改状态" title="修改状态"/></a>
+						<a href="#"><img src="images/index/icn_trash.png" alt="删除" title="删除"/></a>
+					</span>
+				</div>
+				<div class="contentTr" id="9">
+					<span>姚麟</span>
+					<span>15013451417</span>
+					<span>2014-08-08 15:20</span>
+					<span>是</span>
+					<span>
+						<a href="#"><img src="images/index/icn_search.png" alt="寄件详情" title="寄件详情"/></a>
+						<a href="#"><img src="images/index/icn_edit.png" alt="修改状态" title="修改状态"/></a>
+						<a href="#"><img src="images/index/icn_trash.png" alt="删除" title="删除"/></a>
+					</span>
+				</div>
+				<div class="contentTr" id="10">
+					<span>霍恩海姆·艾尔利克</span>
+					<span>15013451417</span>
+					<span>2014-08-08 15:20</span>
+					<span>是</span>
+					<span>
+						<a href="#"><img src="images/index/icn_search.png" alt="寄件详情" title="寄件详情"/></a>
+						<a href="#"><img src="images/index/icn_edit.png" alt="修改状态" title="修改状态"/></a>
+						<a href="#"><img src="images/index/icn_trash.png" alt="删除" title="删除"/></a>
+					</span>
+				</div>
+				<div class="contentTr" id="11">
+					<span>斯卡</span>
+					<span>15013451417</span>
+					<span>2014-08-08 15:20</span>
+					<span>是</span>
+					<span>
+						<a href="#"><img src="images/index/icn_search.png" alt="寄件详情" title="寄件详情"/></a>
+						<a href="#"><img src="images/index/icn_edit.png" alt="修改状态" title="修改状态"/></a>
+						<a href="#"><img src="images/index/icn_trash.png" alt="删除" title="删除"/></a>
+					</span>
+				</div>
+				<div class="contentTr" id="12">
+					<span>格利德</span>
+					<span>15013451417</span>
+					<span>2014-08-08 15:20</span>
+					<span>是</span>
+					<span>
+						<a href="#"><img src="images/index/icn_search.png" alt="寄件详情" title="寄件详情"/></a>
+						<a href="#"><img src="images/index/icn_edit.png" alt="修改状态" title="修改状态"/></a>
+						<a href="#"><img src="images/index/icn_trash.png" alt="删除" title="删除"/></a>
+					</span>
+				</div>
+			</div>
+			<!-- 分页 -->
+		    <div id="pageDiv">
+			    <div class="pagination">
+	            <ul>
+	              <li class="previous"><a href="#fakelink" class="fui-arrow-left"></a></li>
+	              <li class="active"><a href="#fakelink">1</a></li>
+	              <li><a href="#fakelink">2</a></li>
+	              <li><a href="#fakelink">3</a></li>
+	              <li><a href="#fakelink">4</a></li>
+	              <li><a href="#fakelink">5</a></li>
+	              <li><a href="#fakelink">6</a></li>
+	              <li><a href="#fakelink">7</a></li>
+	              <li><a href="#fakelink">8</a></li>
+	              <li class="next"><a href="#fakelink" class="fui-arrow-right"></a></li>
+	            </ul>
+	          </div>
+          </div>
+	    </div>
+	</div>
+
+	<!-- 阴影 -->
+	<div id="shadow"></div>
+	<!-- 修改密码框 -->
+	<div id="changePwd">
+		<p>修改密码：</p>
+		<p><input type="text" placeholder="请输入原密码" class="form-control" />  </p>
+		<p><input type="text" placeholder="请输入新密码" class="form-control" />  </p>
+		<p><input type="text" placeholder="请再次输入新密码" class="form-control" />  </p>
+		<a href="#fakelink" class="btn btn-danger" id="changePwdClose">取消</a>
+		<a href="#fakelink" class="btn btn-primary" id="changePwdChange">修改</a>
+	</div>
+	<!-- 确认退出登录框 -->
+	<div id="logout">
+		<p>您确认要退出么？</p>
+		<a href="#fakelink" class="btn btn-danger" id="logoutClose">取消</a>
+		<a href="#fakelink" class="btn btn-primary" id="logoutYes">确认</a>
+	</div>
+	<!-- 提示框 -->
+	<div id="alertTip">这是个提示框，用js更换文字</div>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.min.js"></script>
+</html>

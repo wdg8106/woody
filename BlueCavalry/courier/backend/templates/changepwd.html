@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block rightSide %}
+ 	<div id="rightSide">
+ 		<h3 style="text-align: center;">修改密码</h3>
+ 		{% if oldpassword_is_wrong %}
+ 		<div class="alert alert-error" style="margin-left: 10%;width: 80%;">
+ 			<button type="button" class="close" data-dismiss="alert">X</button>
+ 			<h4>错误！</h4>原密码不正确</h4>
+ 		</div>
+ 		{% endif %}
+
+	 	<div class="well" style="margin-left: 10%;width: 80%;">
+	 		<form class="form-horizontal" action="" method="post">
+	 			{{form.as_p}}
+	 			<p class="form-actions">
+	 				<input type="submit" value="确认修改" class="btn btn-primatry">
+	 			</p>
+	 		</form>
+	 	</div>
+	 </div>
+{% endblock %}

@@ -1,0 +1,105 @@
+/*描述：我要收件页面样式表
+ 作者：梁银乔
+ 时间：2014-10-10*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 微软雅黑;
+}
+.header {
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    background: #06CC8A;
+}
+.header h3 {
+    color: #ffffff;
+}
+.content {
+    width: 90%;
+    margin: 0 auto;
+}
+.content ul {
+    /*background: red;*/
+    
+    list-style: none;
+}
+.content ul.user_info li {
+    /*background: red;*/
+    
+    margin: 5px 0;
+    padding-left: 45px;
+}
+.content ul.user_info span {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin-left: -45px;
+    vertical-align: middle;
+}
+.content .pic_name {
+    background: url(../images/name.png) no-repeat 0 0;
+    background-size: cover;
+}
+.content .pic_phone {
+    background: url(../images/phone.png) no-repeat 0 0;
+    background-size: cover;
+}
+.content .pic_addr {
+    background: url(../images/addr.png) no-repeat 0 0;
+    background-size: cover;
+}
+.content .pic_send_addr {
+    background: url(../images/send_addr.png) no-repeat 0 0;
+    background-size: cover;
+}
+.content .pic_description {
+    background: url(../images/description.png) no-repeat 0 0;
+    background-size: cover;
+}
+.content ul.user_info input {
+    width: 90%;
+    height: 40px;
+    border: 0;
+    border-bottom: 1px solid #9BEBD0;
+}
+.pic_minus, .pic_plus {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.content .pic_minus {
+    background: url(../images/minus.png) no-repeat 0 0;
+    background-size: cover;
+}
+.content .pic_plus {
+    background: url(../images/plus.png) no-repeat 0 0;
+    background-size: cover;
+}
+.time .time_label{
+	font-size: 14px;
+}
+.time .start{
+	float: left;
+	width: 50%;
+}
+.time .end{
+	float: right;
+	width: 50%;
+}
+.time input{
+	width: 10%;
+}
+.content input[type=submit] {
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #06CC8A;
+    background: #ffffff;
+    border: 1px solid #06CC8A;
+}

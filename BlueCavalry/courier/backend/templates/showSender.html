@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block rightSide %}
+<!-- 右边 -->
+<div id="rightSide">
+	<div id="rightTop">
+		<a href="#">
+			<span class="icon-img fui-mail"></span>&nbsp;&nbsp;{{title}}
+		</a>
+		<span class="fui-arrow-right"></span>&nbsp;&nbsp;{{title}}订单详情
+	</div>
+	<div id="rightContent">
+		
+		<table style="width:100%">
+		<tr>
+			<td>{{title}}人姓名</td>
+			<td>{{info.name}}</td>
+		</tr>
+
+        <tr>
+			<td>电话</td>
+			<td>{{info.phone}}</td>
+		</tr>
+
+		<tr>
+			<td>取件地址</td>
+			<td>{{info.addr}}</td>
+		</tr>
+		<tr>
+			<td>取件时间</td>
+			<td>{{info.time}}</td>
+		</tr>
+        <tr>
+			<td>邮寄时间</td>
+			<td>{{info.send_addr}}</td>
+        </tr>
+        <tr>
+			<td>备注</td>
+			<td>{{info.description}}</td>
+		</tr>
+		<tr>
+			<td>收件人地区</td>
+			<td>{{info.value_area}}</td>
+		</tr>
+		<tr>
+			<td>快件重量</td>
+			<td>{{info.value_weight}}</td>
+		</tr>
+		<tr>
+			<td>价格预估</td>
+			<td>{{info.value_price}}</td>
+		</tr>
+		<tr>
+			<td>下单时间</td>
+			<td>{{info.datetime}}</td>
+		</tr>
+		<tr>
+			<td>是否完成</td>
+			<td>{{info.end_flag}}</td>
+		</tr>
+
+	
+
+</div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block rightSide %}
+
+		<!-- 右边 -->
+		<div id="rightSide">
+	<div id="rightTop">
+		<a href="#">
+			<span class="icon-img fui-mail"></span>&nbsp;&nbsp;{{title}}
+		</a>
+		<span class="fui-arrow-right"></span>&nbsp;&nbsp;{{title}}列表
+	</div>
+
+	<div id="rightContent" style="width:100%">
+			<table style="width:100%;text-align:center;">
+				<thead>
+			<tr>
+			<th style="text-align:center;">{{title}}标题</th>
+			<th style="text-align:center;">内容</th>
+			<th style="text-align:center;">时间</th>
+			<th style="text-align:center;">是否公开</th>
+			<th style="text-align:center;">回复</th>
+			<th style="text-align:center;">操作</th>
+			 </tr>
+		      </thead>
+		  <tbody>
+		<!-- 最好12条数据 -->
+		{% for user in namelist %}
+		<tr>
+			<td>{{user.subject}}</td>
+			<td>{{user.contents}}</td>
+			<td>{{user.datetime}}</td>
+			<td>{{user.is_public}}</td>
+			<td>{{user.reply}}</td>
+			<td>
+				<a href="{%url "modifySend" user.id %}"><img src="/static/images/index/icn_edit.png" alt="回复" title="修改状态"/></a>
+			</td> -->
+		</tr>
+		{%endfor%}	
+
+	</a>
+
+	</div>
+	<!-- 分页 -->
+
+	  
+              
+            <p>
+                 {% for p in page_range %}
+                 {% ifequal p res_list.number %}
+                   <span id="current">{{p}}</span>
+                  {% else %}
+                  <a href="?page={{p}}" title="第{{p}}页">{{p}}</a>
+                  {% endifequal %}  
+                  {%endfor%}
+            </p>
+{% endblock %}

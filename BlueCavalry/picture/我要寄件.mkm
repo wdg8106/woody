@@ -1,0 +1,14 @@
+<MKM version="2.0" imageFileUrl="file:///D:/work/git/BlueCavalry/picture/%e6%88%91%e8%a6%81%e5%af%84%e4%bb%b6.png">
+  <Marks>
+    <LengthMark direction="3" color="16711680" length="92" x="269" y="-4"/>
+    <ColorMark defaultDirection="9" direction="10" color="16711680" targetColor="445578" offsetX="25" offsetY="10" x="465" y="25"/>
+    <ColorMark defaultDirection="9" direction="9" color="16711680" targetColor="10218448" offsetX="25" offsetY="10" x="526" y="190"/>
+    <LengthMark direction="12" color="16711680" length="522" x="55" y="609"/>
+    <LengthMark direction="12" color="16711680" length="141" x="57" y="627"/>
+    <LengthMark direction="12" color="16711680" length="58" x="199" y="638"/>
+    <LengthMark direction="12" color="16711680" length="43" x="330" y="630"/>
+    <LengthMark direction="12" color="16711680" length="47" x="406" y="641"/>
+    <ColorMark defaultDirection="9" direction="9" color="16711680" targetColor="445578" offsetX="25" offsetY="10" x="462" y="901"/>
+    <ColorMark defaultDirection="9" direction="9" color="16711680" targetColor="445578" offsetX="25" offsetY="10" x="271" y="865"/>
+  </Marks>
+</MKM>

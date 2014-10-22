@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" name="viewport">
+    <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/send.css">
+    <title>我要寄件</title>
+</head>
+
+<body>
+    <div class="header">
+        <h3>上门取件</h3>
+    </div>
+    <div class="content" style="width:100%">
+      <form method= 'post' enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td><lable>寄件人姓名 ：</lable></td>
+                <td>{{form.name}}</td>
+                <td>{{form.errors}}</td>
+            </tr>
+
+            <tr>
+                <td><lable>寄件人电话：</lable></td>
+                <td>{{form.phone}}</td>
+                <td>{{form.phone.errors}}</td>
+            </tr>
+
+            <tr>
+                <td><lable>取件地址</lable></td>
+                <td>{{form.addr}}</td>
+                <td>{{form.addr.errors}}</td>
+            </tr>
+
+            <tr>
+                <td><lable>取件时间</lable></td>
+                <td>{{form.time}}</td>
+                <td>{{form.time.errors}}</td>
+            </tr>
+            <tr>
+                <td><lable>邮件地址</lable></td>
+                <td>{{form.send_addr}}</td>
+                <td>{{form.send_addr.errors}}</td>
+            </tr>
+            <tr>
+                <td><lable>备注</lable></td>
+                <td>{{form.description}}</td>
+                <td>{{form.description.errors}}</td>
+            </tr>
+            <tr>
+                <td><lable>收件地区</lable></td>
+                <td>{{form.value_area}}</td>
+                <td>{{form.value_area.errors}}</td>
+            </tr>
+            <tr>
+                <td><lable>寄件公司</lable></td>
+                <td>{{form.company}}</td>
+                <td>{{form.company.errors}}</td>
+            </tr>
+            <tr>
+                <td><lable>快递重量</lable></td>
+                <td>{{form.value_weight}}</td>
+                <td>{{form.value_weight.eerrors}}</td>
+            <tr>
+                <td><lable>预估价格</lable></td>
+                <td>{{form.value_price}}</td>
+                <td>{{form.value_price.errors}}</td>
+            </tr>
+          
+        </table>
+        <div align = "right">
+            <input type='submit'/>
+            <a href="{%url "sendlist" %}"> 返回</a>
+        </div>
+    </form>
+    </div>
+    <script type="text/javascript" src="/static/js/send.js"></script>
+</body>
+
+</html>

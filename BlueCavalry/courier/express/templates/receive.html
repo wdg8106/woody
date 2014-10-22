@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0" name="viewport">
+    <script type="text/javascript" src="/static/js/jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/receive.css">
+    <title>我要收件</title>
+</head>
+
+<body>
+    <div class="header">
+        <h3>送件上门</h3>
+    </div>
+    <div class="content" style="width:100%">
+       <form method='post' enctype="multipart/form-data">
+        <table>
+          <tr>
+            <td><label>收件人姓名</label></td>
+            <td>{{form.name}}</td>
+            <td>{{form.name.errors}}</td>
+        </tr>
+         
+         <tr>
+            <td><label>收件人电话</label></td>
+            <td>{{form.phone}}</td>
+            <td>{{form.phone.errors}}</td>
+        </tr>
+        <tr>
+            <td><label>取件地址</label></td>
+            <td>{{form.fetch_addr}}</td>
+            <td>{{form.fetch_addr.errors}}</td>
+        </tr>
+        <tr>
+            <td><label>送件地址</label></td>
+            <td>{{form.send_addr}}</td>
+            <td>{{form.send_addr.errors}}</td>
+        </tr>
+        <tr>
+            <td><label>送件时间</label></td>
+            <td>{{form.send_time}}</td>
+            <td>{{form.send_time.errors}}</td>
+        </tr>
+        <tr>
+            <td><label>备注</label></td>
+            <td>{{form.description}}</td>
+            <td>{{form.description.errors}}</td>
+        </tr>
+        </table>
+        <div align="right">
+            <input type='submit'/>
+            <a href="{%url "receivelist" %}">返回</a>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="/static/js/receive.js"></script>
+</body>
+
+</html>

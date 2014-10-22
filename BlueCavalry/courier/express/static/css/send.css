@@ -1,0 +1,159 @@
+/*描述：我要寄件页面样式表
+ 作者：梁银乔
+ 时间：2014-10-10*/
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 微软雅黑;
+}
+.header {
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    text-align: center;
+    background: #06CC8A;
+}
+.header h3 {
+    color: #ffffff;
+}
+.content {
+    width: 90%;
+    margin: 0 auto;
+}
+.content ul {
+    /*background: red;*/
+    
+    list-style: none;
+}
+.content ul.user_info li {
+    /*background: red;*/
+    
+    margin: 5px 0;
+    padding-left: 45px;
+}
+.content ul.user_info span {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin-left: -45px;
+    vertical-align: middle;
+}
+.content .pic_name {
+    background: url(../images/name.png) no-repeat 0 0;
+    background-size: cover;
+}
+.content .pic_phone {
+    background: url(../images/phone.png) no-repeat 0 0;
+    background-size: cover;
+}
+.content .pic_addr {
+    background: url(../images/addr.png) no-repeat 0 0;
+    background-size: cover;
+}
+.content .pic_send_addr {
+    background: url(../images/send_addr.png) no-repeat 0 0;
+    background-size: cover;
+}
+.content .pic_description {
+    background: url(../images/description.png) no-repeat 0 0;
+    background-size: cover;
+}
+.content ul.user_info input {
+    width: 90%;
+    height: 40px;
+    border: 0;
+    border-bottom: 1px solid #9BEBD0;
+}
+.pic_minus, .pic_plus {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.content .pic_minus {
+    background: url(../images/minus.png) no-repeat 0 0;
+    background-size: cover;
+}
+.content .pic_plus {
+    background: url(../images/plus.png) no-repeat 0 0;
+    background-size: cover;
+}
+.time {
+    padding-left: 80px;
+}
+.time .time_label {
+    display: inline-block;
+    width: 70px;
+    margin-left: -80px;
+}
+.time input {
+    width: 15%;
+    height: 25px;
+}
+.add_value img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+.value_area {
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #06CC8A;
+}
+.value_trangle {
+    position: absolute;
+    margin-left: 30px;
+    margin-top: -10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #06CC8A;
+}
+.value_trangle div {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin-left: -8px;
+    margin-top: 2px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #ffffff;
+}
+.value_area ul li {
+    height: 50px;
+    padding: 5px;
+}
+.value_area span {
+    float: left;
+    line-height: 50px;
+}
+.value_area input, .value_area select {
+    float: right;
+    margin-right: 20px;
+    border-radius: 5px;
+    width: 160px;
+    height: 40px;
+    color: #ffffff;
+    border: 1px solid #06CC8A;
+}
+.value_area select {
+    font-size: 18px;
+    background: #06CC8A;
+}
+.value_area:focus {
+    border: none;
+}
+.content input[type=submit] {
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #06CC8A;
+    background: #ffffff;
+    border: 1px solid #06CC8A;
+}
